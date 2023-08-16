@@ -1,13 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const MP = require('./mongo'); 
 
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.post('/products');
+app.post('/api/products',MP.createProduct);
 
-app.get('/products');
+app.get('/api/products',MP.getProduct);
 
 app.listen(5000);
