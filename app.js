@@ -9,6 +9,6 @@ app.use(bodyParser.json());
 
 app.post('/api/products',MP.createProduct);
 
-// app.get('/api/products',MP.getProduct);
+app.get('/api/products',MP.getProduct);
 
 app.listen(5000);

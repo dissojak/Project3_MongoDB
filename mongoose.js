@@ -20,3 +20,8 @@ exports.createProduct = async (req, res, next) => {
   const result = await createdProduct.save();
   res.json(result);
 };
+
+exports.getProduct = async (req, res, next) => {
+    const products=await Product.find().exec();
+    res.json({products});
+}
